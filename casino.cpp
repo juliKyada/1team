@@ -1,6 +1,6 @@
 #include <iostream>
-#include <string> // Needed to use strings
-#include <cstdlib> // Needed to use random numbers
+#include <string> 
+#include <cstdlib> 
 #include <ctime>
 using namespace std;
 
