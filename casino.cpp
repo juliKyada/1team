@@ -27,7 +27,8 @@ void rules()
     cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
     drawLine(80,'-');
 }
-}
+};
+
 int main()
 {
     string playerName;
@@ -103,7 +104,7 @@ int main()
     c.drawLine(70,'=');
     cout << "\n\nThanks for playing game. Your balance amount is $ " << amount << "\n\n";
     c.drawLine(70,'=');
-
+	
     return 0;
 }
 
