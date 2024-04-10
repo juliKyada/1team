@@ -3,10 +3,31 @@
 #include <cstdlib> 
 #include <ctime>
 using namespace std;
+class casino
+{
+  int n;
+  char symbol;
+public:
+void drawLine(int n, char symbol)
+{
+    for(int i=0; i<n; i++)
+        cout << symbol;
+    cout << "\n" ;
+}
 
-void drawLine(int n, char symbol);
-void rules();
-
+void rules()
+{
+    system("cls");
+    cout << "\n\n";
+    drawLine(80,'-');
+    cout << "\t\tRULES OF THE GAME\n";
+    drawLine(80,'-');
+    cout << "\t1. Choose any number between 1 to 10\n";
+    cout << "\t2. If you win you will get 10 times of money you bet\n";
+    cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
+    drawLine(80,'-');
+}
+}
 int main()
 {
     string playerName;
@@ -15,12 +36,12 @@ int main()
     int guess;
     int dice; // hold computer generated number
     char choice;
-
+    casino c;
     srand(time(0)); // "Seed" the random generator
 
-    drawLine(60,'_');
+    c.drawLine(60,'_');
     cout << "\n\n\n\t\tCASINO GAME\n\n\n\n";
-    drawLine(60,'_');
+    c.drawLine(60,'_');
 
     cout << "\n\nEnter Your Name : ";
     getline(cin, playerName);
@@ -31,7 +52,7 @@ int main()
     do
     {
         system("cls");
-        rules();
+        c.rules();
         cout << "\n\nYour current balance is $ " << amount << "\n";
 
 		// Get player's betting amount
@@ -79,29 +100,10 @@ int main()
     }while(choice =='Y'|| choice=='y');
 
     cout << "\n\n\n";
-    drawLine(70,'=');
+    c.drawLine(70,'=');
     cout << "\n\nThanks for playing game. Your balance amount is $ " << amount << "\n\n";
-    drawLine(70,'=');
+    c.drawLine(70,'=');
 
     return 0;
 }
 
-void drawLine(int n, char symbol)
-{
-    for(int i=0; i<n; i++)
-        cout << symbol;
-    cout << "\n" ;
-}
-
-void rules()
-{
-    system("cls");
-    cout << "\n\n";
-    drawLine(80,'-');
-    cout << "\t\tRULES OF THE GAME\n";
-    drawLine(80,'-');
-    cout << "\t1. Choose any number between 1 to 10\n";
-    cout << "\t2. If you win you will get 10 times of money you bet\n";
-    cout << "\t3. If you bet on wrong number you will lose your betting amount\n\n";
-    drawLine(80,'-');
-}
