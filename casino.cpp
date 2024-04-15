@@ -100,6 +100,11 @@ int main()
         cin >> choice;
     }while(choice =='Y'|| choice=='y');
 
+    cout << "\n\n\n";
+    c.drawLine(70,'=');
+    cout << "\n\nThanks for playing game. Your balance amount is $ " << amount << "\n\n";
+    c.drawLine(70,'=');
+	
     return 0;
 }
 
